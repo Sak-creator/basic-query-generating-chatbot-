@@ -1,0 +1,168 @@
+
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: provide_table_new
+  examples: |
+    -  [vendors](tablenamenew)
+    -  [vendors](tablenamenew)
+    - give list of [vendors](tablenamenew)
+    - show me list of [vendors](tablenamenew)
+    - list all [vendors](tablenamenew)
+    - bring the list of [vendors](tablenamenew)
+
+- intent: provide_table_where
+  examples: |
+    - show [vendors](tablenamenew) whose [experience](column) is [greater]{"entity": "operator", "value": ">"} than [18](value) years
+    - give [vendors](tablenamenew) whose [age](column) is [less]{"entity": "operator", "value": "<"}than [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [lesser]{"entity": "operator", "value": "<"} than [20](value) 
+    - show [vendors](tablenamenew) whose [experience](column) is [less]{"entity": "operator", "value": "<"} than [10](value) years
+    - get me [vendors](tablenamenew) whose [age](column) is [greater]{"entity": "operator", "value": ">"} than [50](value)
+    - display [vendors](tablenamenew) with [age](column) [less]{"entity": "operator", "value": "<"} than [30](value)
+    - show me the [vendors](tablenamenew) where [age](column) is [less]{"entity": "operator", "value": "<"} than [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [below]{"entity": "operator", "value": "<"} [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [above]{"entity": "operator", "value": ">"} [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [more than]{"entity": "operator", "value": ">"} [30](value)
+    - list [vendors](tablenamnew) whose [age](column) is [more]{"entity": "operator", "value": ">"} [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [less than]{"entity": "operator", "value": ">"} [30](value)
+    - list [vendors](tablenamenew) whose [age](column) is [lesser than]{"entity": "operator", "value": ">"} [30](value)
+   
+- intent: provide_table_name
+  examples: |
+    - list [vendors](tablenamenew) whose [name](column) [contains]{"entity": "operator", "value": "like"} [abcd](title)
+    - list [vendors](tablenamenew) whose [name](column) [has]{"entity": "operator", "value": "like"} [A](title)
+    - list [vendors](tablenamenew) whose [name](column) is [equals]{"entity": "operator", "value": "="} [Sakshi](title)
+    - list [vendors](tablenamenew) whose [name](column) is [equal to]{"entity": "operator", "value": "="} [Priya](title)
+    - show me the [vendors](tablenamenew) whose [name](column) is [equal to]{"entity": "operator", "value": "="} [Abhay](title)
+    - get me [vendors](tablenamenew) whose [name](column) [contains]{"entity": "operator", "value": "like"} [Priya](title)
+    - display [vendors](tablenamnew) whose [name](column) [has]{"entity": "operator", "value": "like"} [Sharma](title)
+    - display [vendors](tablenamenew) whose [name](column) [has]{"entity": "operator", "value": "like"} [Cements](title)
+
+- intent: provide_table
+  examples: |
+    -  table name is [employees](table)
+    -  table name is [vendors](table)
+    -  table name is [clients](table)
+    -  table name is [customers](table)
+    -  table name is [patients](table)
+    - add new record 
+    - add record
+    - table is [employees](table)
+    - table is [clients](table)
+    - table is [customers](table)
+    - table is [patients](table)
+    - table is [vendors](table)
+    - name is [employees](table)
+    - name is [clients](table)
+    - name is [vendors](table)
+    - name is [customers](table)
+    - name is [patients](table)
+    - I want to create a new [vendor](table)
+    - I want to create a new [clients](table)
+    - I want to create a new [customers](table)
+    - I want to create a new [employees](table)
+    - I want to create a new [patients](table)
+    - I want to insert new [vendor](table) to master data
+    - I want to insert new [clients](table) to master data
+    - I want to insert new [patients](table) to master data
+    - I want to insert new [employees](table) to master data
+    - I want to insert new [customers](table) to master data
+    - I want to create new [vendor](table) profile
+    - I want to create new [customers](table) profile
+    - I want to create new [clients](table) profile
+    - I want to create new [employees](table) profile
+    - I want to create new [patients](table) profile
+    - I want to insert new [vendors](table) to the database
+    - I want to insert new [clients](table) to the database
+    - I want to insert new [employees](table) to the database
+
+    
+
+- intent: provide_name
+  examples: |
+    - [Sakshi](namee)
+    - [priya](namee)
+    - [Abhay](namee)
+    - [John](namee)
+    - [Sophie](namee)
+    - [Ranveer](namee)
+    - [naman](namee)
+    - [Raj](namee)
+    - [Nakul](namee)
+    - [Shreya](namee)
+    - [Aryaman](namee)
+   
+- intent: provide_location
+  examples: |
+    - [Paris](location)
+    - [London](location)
+    - [Jaipur](location)
+    - [Chennai](location)
+    - [Delhi](location)
+    - [Odisha](location)
+    - [New York](location)
+    - [Indore](location)
+    - [Kerela](location)
+    - [Tokyo](location)
+    - [Punjab](location)
+    - [africa](location)
+    - [Bengluru](location)
+    - [Lucknow](location)
+    - [Jamshedpur](location)
+
+- intent: provide_experience
+  examples: |
+    - [4](experience)years
+    - [12](experience)years
+    - [5](experience)years
+    - [10](experience)years
+    - [8](experience)years
+    - [29](experience)years
+    - [14](experience)
+    - [17](experience)
+    - [1](experience)
+    - [60](experience)
+    - [15](experience)
+    - [35](experience)
+
+- intent: provide_rowname
+  examples: |
+    - [change]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Simran](update_name) whose name is [Sakshi](new_name) whose [experience](skill) is [greater]{"entity": "quantity", "value": ">"} than [18](number) yearsand customer id is [1256](customer_id)  
+    - [change]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Riya](update_name) whose name is [Priya](new_name) whose [experience](skill) is [more]{"entity": "quantity", "value": ">"} than [3](number) years  and customer id is [546](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Ranveer](update_name) whose name is [Raj](new_name) whose [experience](skill) is [above]{"entity": "quantity", "value": ">"} [56](number) years and customer id is [1232](customer_id)
+    - [update](update) [vendor's]{"entity": "rowname", "value": "vendor"} [Abhinav](update_name)whose name is [Abhay](new_name) whose [work](skill) is [less]{"entity": "quantity", "value": "<"} than [21](number) years and customer id is [8875](customer_id)
+    - [update](update) [vendor's]{"entity": "rowname", "value": "vendor"} [Priyanka](update_name) whose name is [Shloka](new_name) whose [work](skill) is [below]{"entity": "quantity", "value": "<"} than [8](number) years and customer id is [1128](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Naman](update_name) whose name is [Rohan](new_name) whose [experience](skill) is [less]{"entity": "quantity", "value": "<"} [12](number) years and customer id is [7654](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Sandy](update_name) whose name is [Naman](new_name) whose [experience](skill) is [equal]{"entity": "quantity", "value": "="} [34](number) years and customer id is [112995](customer_id)
+    - [update]{"entity": "update", "value": "Update"} [vendor's]{"entity": "rowname", "value": "vendor"} [Name](update_name) whose name is [Rose](new_name) whose [experience](skill) is [equal]{"entity": "quantity", "value": "="} to [5](number) years and customer id is [94783](customer_id)
+
+

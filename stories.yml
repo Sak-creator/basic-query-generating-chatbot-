@@ -1,0 +1,87 @@
+
+
+
+
+version: "3.1"
+
+stories:
+  - story: greet and goodbye
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: greet with information intake
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_table
+      - action: action_collect_information
+      - intent: provide_name
+      - action: action_collect_information
+      - intent: provide_location
+      - action: action_collect_information
+      - intent: provide_experience
+      - action: action_collect_information
+
+  - story: story path 5
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_name
+      - action: action_collect_information
+      - intent: provide_location
+      - action: action_collect_information
+      - intent: provide_experience
+      - action: action_collect_information
+
+  - story: greet with display where query
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_table_where
+      - action: generate_where_query_action
+
+  - story: story path 3
+    steps:
+      - intent: provide_table_where
+      - action: generate_where_query_action
+
+  - story: story path 1
+    steps:
+      - intent: provide_table_new
+      - action: generate_sql_query_action
+
+  - story: story path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_table_new
+      - action: generate_sql_query_action
+
+  - story: greet with display name
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_table_name
+      - action: generate_where_query_action
+
+  - story: story path 4
+    steps:
+      - intent: provide_table_name
+      - action: generate_where_query_action
+
+  - story: greet with update information intake
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: provide_rowname
+      - action: generate_update_query_action
+    
+  - story: story path update
+    steps:
+      - intent: provide_rowname
+      - action: generate_update_query_action
+
+  
